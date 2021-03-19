@@ -1,3 +1,44 @@
 .carouselwide{
 width: 300px;
 }
+.primary-button{
+    position: relative;
+    display: inline-block;
+    padding: 0px 30px;
+    background: #83ba09;
+    color: #FFF;
+    font-weight: 400;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    border-radius: 25px;
+    overflow: hidden;
+    opacity: 0.9;
+    -webkit-transition: 0.6s all;
+    transition: 0.6s all;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.primary-button::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 120%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale3d(6, 2, 1) rotate(135deg) translate(0, -150%);
+    transform: scale3d(6, 2, 1) rotate(135deg) translate(0, -150%);
+    -webkit-transition: 0.6s all;
+    transition: 0.6s all;
+}
+.primary-button:hover{
+    text-decoration: none;
+    outline: none;
+    color: #FFF;
+    opacity: 1;
+}
+.primary-button:hover:after, .primary-button:focus:after {
+    -webkit-transform: scale3d(6, 2, 1) rotate(135deg) translate(0, 100%);
+    transform: scale3d(6, 2, 1) rotate(135deg) translate(0, 100%);
+}
